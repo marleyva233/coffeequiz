@@ -13,9 +13,45 @@
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
-		
+		<div class="container-fluid">
+			<div class="row">
+				<div id="quiz" class="col-10 mx-auto text-center">
+					<!-- the first section will contain an intro to the quiz, with an image -->
+					
+					<div id="quizIntro">
+						<h1>Coffee Quiz</h1>
+    					<button class="btn btn-dark p-1" onclick="startQuiz();">Start the quiz</button>
+    					<img src="https://grancolombiatours.com/wp-content/uploads/2017/09/coffee.jpg" class="p-1 w-100">
+					</div>
+				</div>
+			</div>
+					<!-- ending intro section -->
+			<div class="row">
+				<div class="col-10 mx-auto">
+					<form id="quizform">
 
+					<!-- generated quiz goes here -->
+					</form>
 
+					
+					<!-- starting the quiz here -->
+					
+					<!-- this does not need to be created in JS/ only the content is generated  -->
+					<div id="submitquiz" class="text-center">
+						<button class="btn btn-dark" onclick="checkQuiz();">Submit your answers!</button>
+					</div>
+						
+				</div>
+			</div>
+		</div>
+					<!-- ending the quiz here -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-10 mx-auto" id="score">
+
+				</div>
+			</div>
+		</div>
 
 
 

@@ -1,0 +1,28 @@
+/*
+[0]GENERAL
+[1]
+*/
+
+
+/*[0]GENERAL*/
+body{
+	padding: 5% 0;
+	text-align: left;
+}
+h1{
+	text-align: center;
+}
+ul{
+	text-align: left;
+	list-style: none;
+}
+
+
+.incorrect{
+	text-align: left;
+	color:red;
+}
+
+#submitquiz{
+	display: none;
+}
