@@ -9,7 +9,7 @@ var quiz=[
 	correct:"two" ,	
 },
 {
-	question: "How many cups of coffee could kill a 150lb person?",
+	question: "How many cups of coffee does it take to kill a 150lb person?",
 	correct: "seventy",
 },
 {
@@ -21,7 +21,7 @@ var quiz=[
 	correct: "one thousand dollars"	
 },
 {
-	question: "This country banned coffee and coffee paraphernalia in 1746.The King of this country also ordered convicted murderers to drink coffee as a death sentence.",
+	question: "This country banned coffee and coffee paraphernalia in 1746. The King of this country also ordered convicted murderers to drink coffee as a death sentence.",
 	correct: "sweden"
 },
 {
@@ -73,7 +73,7 @@ function checkQuiz() {
         			document.getElementById(answerID).className = "form-control";
         		} else {
         			// add a class of "incorrect" if guessed wrong
-        			document.getElementById("question"+[i]).className = " incorrect";
+        			document.getElementById("question"+[i]).className = "incorrect";
         			incorrectCounter++;
         		}
         	}
