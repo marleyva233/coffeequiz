@@ -15,7 +15,9 @@
 	<body>
 		<div class="container-fluid">
 			<div class="row">
-				<div id="quiz" class="col-10 mx-auto text-center">
+				<div class="col-10 mx-auto text-center">
+					<form name="quiz" id="quiz">
+					</form>
 					<!-- the first section will contain an intro to the quiz, with an image -->
 					
 					<div id="quizIntro">
@@ -27,16 +29,7 @@
 			</div>
 					<!-- ending intro section -->
 			<div class="row">
-				<div class="col-10 mx-auto">
-					<form id="quizform">
-
-					<!-- generated quiz goes here -->
-					</form>
-
-					
-					<!-- starting the quiz here -->
-					
-					<!-- this does not need to be created in JS/ only the content is generated  -->
+				<div class="col-10 mx-auto">			
 					<div id="submitquiz" class="text-center">
 						<button class="btn btn-dark" onclick="checkQuiz();">Submit your answers!</button>
 					</div>
