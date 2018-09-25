@@ -17,12 +17,6 @@ ul{
 	list-style: none;
 }
 
-
-.incorrect{
-	text-align: left;
-	color:red;
-}
-
 #submitquiz{
 	display: none;
 }

@@ -69,15 +69,18 @@ function startQuiz(){
 		var counter=0;
 		var correctAnswer=quiz[i].correct;
 		var userAnswer=document.getElementById("answer"+i);
-		console.log(userAnswer);
 		var question=document.getElementById("question"+i);
-		if(userAnswer.checked && userAnswer.value==correctAnswer){
+		if (userAnswer.checked){
+			userAnswer=userAnswer.value;
+		}
+		console.log(userAnswer)
+		if(userAnswer==correctAnswer){
 			question.classList.remove("text-light");
 			question.classList.add("text-info");
 		}else{
 			question.classList.remove("text-light");
 			question.classList.add("text-danger");
-			counter=counter+1;
+			counter++;
 			}
 		}
 		document.getElementById("score").innerHTML = "<h1>You got " + counter + " questions wrong</h1>";
