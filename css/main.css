@@ -16,7 +16,9 @@ ul{
 	text-align: left;
 	list-style: none;
 }
-
 #submitquiz{
 	display: none;
+}
+[type='radio'] {
+	margin:5px;
 }
