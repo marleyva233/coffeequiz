@@ -11,7 +11,7 @@ var quiz=[
 	correct: "2" 	
 },
 {
-	question: "How many cups of coffee could kill a 150lb person?",
+	question: "How many cups of coffee can kill a 150lb person?",
 	options:[10, 20, 70, 100],
 	correct: "70"
 },
@@ -77,7 +77,7 @@ function startQuiz(){
 		var question=document.getElementById("question"+j);
 		var correctAnswer=quiz[j].correct;
 		if(answerValue==correctAnswer){
-			question.classList.remove("text-light");
+			question.classList.remove("text-light", "text-danger");
 			question.classList.add("text-info");
 			correct++
 		}else{
@@ -90,5 +90,5 @@ function startQuiz(){
 		console.log("incorrect:"+incorrect);
 		console.log("correct:"+correctAnswer);
 	}
-		document.getElementById("score").innerHTML = "<h1>You got " + correct + " questions correct</h1>";
+		document.getElementById("score").innerHTML = "<h1 class='animated bounce'>You got " + correct + " questions correct</h1>";
 	}
