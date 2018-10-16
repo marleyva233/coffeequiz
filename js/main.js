@@ -52,7 +52,8 @@ var quiz=[
 }
 ];
 function startQuiz(){
-	document.getElementById("quizIntro").style.display="none";
+	document.getElementById("intro").style.display="none";
+	document.getElementById("quizIntro").style.display="initial";
 	for (var i=0; i<quiz.length; i++){
 		var questionArea="<div class='bg-dark text-light' id='question"+i+"'><p>"+ (i+1)+". "+ quiz[i].question+"</p></div><div class='pb-4'>";
 			for (var j=0; j<quiz[i].options.length; j++){
@@ -91,4 +92,5 @@ function startQuiz(){
 		console.log("correct:"+correctAnswer);
 	}
 		document.getElementById("score").innerHTML = "<h1 class='animated bounce'>You got " + correct + " questions correct</h1>";
+		document.getElementById("results").style.display="initial";
 	}

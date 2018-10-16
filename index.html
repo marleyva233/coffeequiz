@@ -12,48 +12,46 @@
 		<!-- animate css -->
 		<link rel="stylesheet"
   		href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  		<!-- google fonts -->
+  		<link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans" rel="stylesheet">
 		<!-- my custom css -->
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
-		<div class="container-fluid">
+		<!-- starting intro section -->
+		<div class="container-fluid white" id="intro">
 			<div class="row">
-				<div class="col-10 mx-auto text-center">
-					<form name="quiz" id="quiz">
-					</form>
-					<!-- the first section will contain an intro to the quiz, with an image -->
-					
-					<div id="quizIntro">
-						<h1 class="animated lightSpeedIn">Coffee Quiz</h1>
-						<p>Test your coffee knowledge! :D</p>
-    					<button class="btn btn-dark p-1" onclick="startQuiz();">Start the quiz</button><br>
-    					<img src="img/coffee.png" alt="various coffees" class="p-1">
-    					<!-- <img src="https://grancolombiatours.com/wp-content/uploads/2017/09/coffee.jpg" class="p-1 w-100"> -->
-					</div>
+				<div class="col-10 mx-auto">
+						<h1 class="animated lightSpeedIn">Coffee Quiz 
+							<i class="fas fa-coffee"></i>
+						</h1>
+						<p>Test your coffee knowledge!</p>
+    					<button class="btn btn-dark p-1" onclick="startQuiz();">Start the quiz</button>
 				</div>
 			</div>
-					<!-- ending intro section -->
+		</div>
+		<!-- ending intro section -->
+
+		<!-- starting quiz section -->
+		<div class="container-fluid" id="quizIntro">
 			<div class="row">
-				<div class="col-10 mx-auto">			
-					<div id="submitquiz" class="text-center">
+				<div class="white col-10 mx-auto">
+						<form name="quiz" id="quiz">
+							quiz will appear here
+						</form>			
 						<button class="btn btn-dark" onclick="checkQuiz();">Submit your answers!</button>
-					</div>
-						
 				</div>
 			</div>
 		</div>
-					<!-- ending the quiz here -->
-		<div class="container-fluid">
+		<!-- ending the quiz here -->
+		<!-- starting quiz results -->
+		<div class="container-fluid" id="results">
 			<div class="row">
-				<div class="col-10 mx-auto" id="score">
-
+				<div class="white col-10 mx-auto pt-5" id="score">
+						<!-- results will appear here -->
 				</div>
 			</div>
 		</div>
-
-
-
-
 
 		<!--jquery -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -65,11 +63,3 @@
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
-
-
-
-
-
-
-
-
