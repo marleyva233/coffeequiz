@@ -62,7 +62,7 @@ function startQuiz(){
 			questionArea+="</div>";
 		document.getElementById("quiz").innerHTML+=questionArea;
 	}
-	document.getElementById("submitquiz").style.display="initial";
+	// document.getElementById("submitquiz").style.display="initial";
 }
 	function checkQuiz() {
 		document.getElementById("score").innerHTML="";
