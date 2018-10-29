@@ -43,3 +43,10 @@ ul{
 #quizIntro{
 	display: none;
 }
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 565px){
+	#intro{
+		height: 600px;
+	}
+}
