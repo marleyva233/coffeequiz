@@ -2,8 +2,6 @@
 [0]GENERAL
 [1]
 */
-
-
 /*[0]GENERAL*/
 body{
 	background-image: url("https://grancolombiatours.com/wp-content/uploads/2017/09/coffee.jpg");
@@ -13,6 +11,7 @@ body{
 	padding:0;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
 }
 .white{
 	background-color:rgba(255, 255, 255, 0.8);
@@ -25,28 +24,31 @@ ul{
 	text-align: left;
 	list-style: none;
 }
-#submitquiz{
-	display: none;
-}
 [type='radio'] {
 	margin:5px;
 }
 .bounce{
 	animation-iteration-count: infinite;
 }
+span{
+	width: 100%;
+	display: block;
+	background-color: black;
+	color:white;
+	text-align: left;
+	padding-left: 3%;
+}
 #intro{
-	height: 100vw;
+	padding-top: 5%;
+	height: 100vh;
 }
+#questions,
 #results{
-	display: none;
+	padding: 5%;
 }
-#quizIntro{
-	display: none;
-}
-
 /*MEDIA QUERIES*/
-@media only screen and (max-width: 565px){
+/*@media only screen and (max-width: 565px){
 	#intro{
 		height: 600px;
 	}
-}
+}*/

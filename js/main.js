@@ -1,4 +1,3 @@
-//starting my quiz questions&answers
 var quiz=[
 {
 	question: "Which country produces the most coffee?",
@@ -53,19 +52,21 @@ var quiz=[
 ];
 function startQuiz(){
 	document.getElementById("intro").style.display="none";
-	document.getElementById("quizIntro").style.display="initial";
 	for (var i=0; i<quiz.length; i++){
-		var questionArea="<div class='bg-dark text-light' id='question"+i+"'><p>"+ (i+1)+". "+ quiz[i].question+"</p></div><div class='pb-4'>";
+		var questionArea="<span id='question"+i+"'>";
+			questionArea+= (i+1)+". "+ quiz[i].question+"</span>";
 			for (var j=0; j<quiz[i].options.length; j++){
-				questionArea+="<label class='px-2'>"+quiz[i].options[j]+"<input name='answer"+i+"' type='radio' value='"+quiz[i].options[j]+"'></label>";
+				questionArea+="<label>"+quiz[i].options[j];
+				questionArea+="<input name='answer"+i+"' type='radio' value='"+quiz[i].options[j]+"'></label>";
 			}
-			questionArea+="</div>";
-		document.getElementById("quiz").innerHTML+=questionArea;
+			document.getElementById("questions").innerHTML+=questionArea;
 	}
-	// document.getElementById("submitquiz").style.display="initial";
+	var btn=document.createElement("div");
+		btn.innerHTML="<button class='btn btn-dark' onclick='checkQuiz();'>Submit Quiz</button>";
+	document.getElementById("questions").appendChild(btn);
 }
 	function checkQuiz() {
-		document.getElementById("score").innerHTML="";
+		document.getElementById("results").innerHTML="";
 		var correct=0;
 		var incorrect=0;
 		for (var j=0; j<quiz.length; j++){
@@ -91,6 +92,5 @@ function startQuiz(){
 		console.log("incorrect:"+incorrect);
 		console.log("correct:"+correctAnswer);
 	}
-		document.getElementById("score").innerHTML = "<h1 class='animated bounce'>You got " + correct + " questions correct</h1>";
-		document.getElementById("results").style.display="initial";
+		document.getElementById("results").innerHTML = "<h1 class='animated bounce'>You got " + correct + " questions correct</h1>";
 	}

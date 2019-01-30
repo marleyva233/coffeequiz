@@ -18,41 +18,23 @@
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
-		<!-- starting intro section -->
-		<div class="container-fluid white" id="intro">
-			<div class="row pt-5">
-				<div class="col-10 mx-auto pt-5">
+		<!-- starting quiz -->
+		<div class="container-fluid white">
+			<div class="row" id="quiz">
+				<div class="col-10 mx-auto" id="intro">
 						<h1 class="animated lightSpeedIn">Coffee Quiz 
 							<i class="fas fa-coffee"></i>
 						</h1>
 						<p>Test your coffee knowledge!</p>
     					<button class="btn btn-dark p-1" onclick="startQuiz();">Start the quiz</button>
 				</div>
-			</div>
-		</div>
-		<!-- ending intro section -->
-
-		<!-- starting quiz section -->
-		<div class="container-fluid" id="quizIntro">
-			<div class="row">
-				<div class="white col-10 mx-auto p-2">
-						<form name="quiz" id="quiz">
-							<!-- quiz will appear here -->
-						</form>			
-						<button class="btn btn-dark" onclick="checkQuiz();">Submit your answers!</button>
+				<div id="questions">
+				</div>
+				<div id="results">
 				</div>
 			</div>
 		</div>
-		<!-- ending the quiz here -->
-		<!-- starting quiz results -->
-		<div class="container-fluid" id="results">
-			<div class="row">
-				<div class="white col-10 mx-auto pt-5" id="score">
-						<!-- results will appear here -->
-				</div>
-			</div>
-		</div>
-
+		<!-- ending quiz -->
 		<!--jquery -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<!-- popper is required for bootstrap 4 js functionality -->
