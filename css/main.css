@@ -1,20 +1,14 @@
-/*
-[0]GENERAL
-[1]
-*/
 /*[0]GENERAL*/
 body{
 	background-image: url("https://grancolombiatours.com/wp-content/uploads/2017/09/coffee.jpg");
 	background-repeat: no-repeat;
-	background-size: auto;
 	background-attachment: fixed;
+	background-size: cover;
 	padding:0;
-	text-align: center;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
-}
-.white{
-	background-color:rgba(255, 255, 255, 0.8);
+	color:#000;
+	text-align: center;
 }
 h1{
 	font-family: 'Courgette', cursive;
@@ -39,16 +33,13 @@ span{
 	padding-left: 3%;
 }
 #intro{
+	background-color:rgba(255, 255, 255, 0.8);
 	padding-top: 5%;
 	height: 100vh;
 }
 #questions,
 #results{
+	display: none;
+	background-color: #fff;
 	padding: 5%;
 }
-/*MEDIA QUERIES*/
-/*@media only screen and (max-width: 565px){
-	#intro{
-		height: 600px;
-	}
-}*/

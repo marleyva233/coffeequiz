@@ -1,4 +1,4 @@
-var quiz=[
+var quiz = [
 {
 	question: "Which country produces the most coffee?",
 	options: ["Brazil", "Vietnam", "Colombia", "Guatemala"],
@@ -50,47 +50,43 @@ var quiz=[
 	correct: "Yes"
 }
 ];
-function startQuiz(){
-	document.getElementById("intro").style.display="none";
-	for (var i=0; i<quiz.length; i++){
-		var questionArea="<span id='question"+i+"'>";
-			questionArea+= (i+1)+". "+ quiz[i].question+"</span>";
-			for (var j=0; j<quiz[i].options.length; j++){
-				questionArea+="<label>"+quiz[i].options[j];
-				questionArea+="<input name='answer"+i+"' type='radio' value='"+quiz[i].options[j]+"'></label>";
+function startQuiz() {
+	document.getElementById("intro").style.display = "none";
+	document.getElementById("questions").style.display="block";
+	for (var i = 0; i < quiz.length; i++) {
+		var questionArea = "<span id='question" + i + "'>";
+			questionArea += (i + 1) + ". " + quiz[i].question + "</span>";
+			for (var j = 0; j < quiz[i].options.length; j++){
+				questionArea += "<label>" + quiz[i].options[j];
+				questionArea += "<input name='answer" + i + "' type='radio' value='" + quiz[i].options[j] + "'></label>";
 			}
-			document.getElementById("questions").innerHTML+=questionArea;
+			document.getElementById("questions").innerHTML += questionArea;
 	}
-	var btn=document.createElement("div");
-		btn.innerHTML="<button class='btn btn-dark' onclick='checkQuiz();'>Submit Quiz</button>";
+	var btn = document.createElement("div");
+		btn.innerHTML = "<button class='btn btn-dark' onclick='checkQuiz();'>Submit Quiz</button>";
 	document.getElementById("questions").appendChild(btn);
 }
 	function checkQuiz() {
 		document.getElementById("results").innerHTML="";
-		var correct=0;
-		var incorrect=0;
-		for (var j=0; j<quiz.length; j++){
-			var userAnswer=document.getElementsByName("answer"+j)
+		var correct = 0;
+		for (var j = 0; j < quiz.length; j++){
+			var userAnswer = document.getElementsByName("answer" + j)
 			var answerValue;
-		for (var i=0; i<userAnswer.length; i++){
-			if(userAnswer[i].checked)
-				answerValue=userAnswer[i].value;
+		for (var i = 0; i < userAnswer.length; i++){
+			if (userAnswer[i].checked)
+				answerValue = userAnswer[i].value;
 		}
-		var question=document.getElementById("question"+j);
-		var correctAnswer=quiz[j].correct;
-		if(answerValue==correctAnswer){
+		var question = document.getElementById("question" + j);
+		var correctAnswer = quiz[j].correct;
+		if (answerValue == correctAnswer){
 			question.classList.remove("text-light", "text-danger");
 			question.classList.add("text-info");
-			correct++
-		}else{
+			correct++;
+		} else {
 			question.classList.remove("text-light");
 			question.classList.add("text-danger");
-			incorrect++
 		}
-		console.log("user answer:"+answerValue);
-		console.log("correct:"+ correct);
-		console.log("incorrect:"+incorrect);
-		console.log("correct:"+correctAnswer);
 	}
+		document.getElementById("results").style.display="block";
 		document.getElementById("results").innerHTML = "<h1 class='animated bounce'>You got " + correct + " questions correct</h1>";
 	}
