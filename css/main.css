@@ -21,16 +21,25 @@ ul{
 [type='radio'] {
 	margin:5px;
 }
+label{
+	padding-left: 3%;
+}
 .bounce{
 	animation-iteration-count: infinite;
+}
+h4{
+	color:#c1905e;
 }
 span{
 	width: 100%;
 	display: block;
-	background-color: black;
-	color:white;
+	background-color: #ffe7c8;
+	color:#000;
 	text-align: left;
 	padding-left: 3%;
+}
+.wrong{
+	color:red;
 }
 #intro{
 	background-color:rgba(255, 255, 255, 0.8);
@@ -42,4 +51,7 @@ span{
 	display: none;
 	background-color: #fff;
 	padding: 5%;
+}
+.cup{
+	font-size: 40px;
 }
