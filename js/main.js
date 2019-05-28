@@ -1,4 +1,4 @@
-var quiz = [
+const quiz = [
 {
 	question: "Which country produces the most coffee?",
 	options: ["Brazil", "Vietnam", "Colombia", "Guatemala"],
@@ -52,7 +52,7 @@ var quiz = [
 ];
 function startQuiz() {
 	document.getElementById("intro").style.display = "none";
-	var questions=document.getElementById("questions");
+	var questions = document.getElementById("questions");
 		questions.style.display="block";
 	for (var i = 0; i < quiz.length; i++) {
 		   var questionArea = "<span id='question" + i + "'>";
@@ -68,7 +68,7 @@ function startQuiz() {
 	questions.appendChild(btn);
 }
 	function checkQuiz() {
-		var results=document.getElementById("results");
+		var results = document.getElementById("results");
 			results.innerHTML = "";
 		var correct = 0;
 		for (var j = 0; j < quiz.length; j++){
@@ -87,6 +87,6 @@ function startQuiz() {
 			question.classList.add("wrong");
 		}
 	}
-		results.style.display="block";
+		results.style.display = "block";
 		results.innerHTML = "<h1 class='animated bounce'>You got " + correct + " questions correct</h1>";
 	}
