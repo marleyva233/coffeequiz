@@ -50,12 +50,18 @@ const quiz = [
 	correct: "Yes"
 }
 ];
+function hide(id) {
+	document.getElementById(id).classList.add("invis");
+}
+function show(id) {
+	document.getElementById(id).classList.remove("invis");
+}
 function startQuiz() {
-	document.getElementById("intro").style.display = "none";
-	var questions = document.getElementById("questions");
-		questions.style.display="block";
+	hide("intro");
+	let questions = document.getElementById("questions");
+	show("questions");
 	for (var i = 0; i < quiz.length; i++) {
-		   var questionArea = "<span id='question" + i + "'>";
+		   let questionArea = "<span id='question" + i + "'>";
 			questionArea += (i + 1) + ". " + quiz[i].question + "</span>";
 			for (var j = 0; j < quiz[i].options.length; j++){
 				questionArea += "<label>" + quiz[i].options[j];
@@ -63,14 +69,14 @@ function startQuiz() {
 			}
 			questions.innerHTML += questionArea;
 	}
-	var btn = document.createElement("div");
+	let btn = document.createElement("div");
 		btn.innerHTML = "<button class='btn btn-dark' onclick='checkQuiz();'>Submit Quiz</button>";
 	questions.appendChild(btn);
 }
 	function checkQuiz() {
-		var results = document.getElementById("results");
+		let results = document.getElementById("results");
 			results.innerHTML = "";
-		var correct = 0;
+		let correct = 0;
 		for (var j = 0; j < quiz.length; j++){
 			var userAnswer = document.getElementsByName("answer" + j)
 			var answerValue;
@@ -78,8 +84,8 @@ function startQuiz() {
 			if (userAnswer[i].checked)
 				answerValue = userAnswer[i].value;
 		}
-		var question = document.getElementById("question" + j);
-		var correctAnswer = quiz[j].correct;
+		let question = document.getElementById("question" + j);
+		let correctAnswer = quiz[j].correct;
 		if (answerValue == correctAnswer){
 			question.classList.remove("wrong");
 			correct++;
@@ -87,6 +93,6 @@ function startQuiz() {
 			question.classList.add("wrong");
 		}
 	}
-		results.style.display = "block";
+		show("results");
 		results.innerHTML = "<h1 class='animated bounce'>You got " + correct + " questions correct</h1>";
 	}
